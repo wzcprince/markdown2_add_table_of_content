@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* Solarized (Dark) */
+/* Authors: Ethan Schoonover: http://ethanschoonover.com/solarized, CodeCatalyst: http://codecatalyst.com/ */
+/* Version: d9a83f4e7a47432baff86e1e7946d9e066cf3d1b (modified) */
+/* https://github.com/CodeCatalyst/mou-theme-solarized */
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul,
+li,
+img {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html * {
+  font-family: "ff-din-web-pro-1", "ff-din-web-pro-2", sans-serif;
+  font-size: 16px;
+  line-height: 19.2px;
+  color-profile: sRGB;
+}
+body {
+  min-width: 32em;
+  max-width: 52em;
+  margin: 10px;
+}
+p {
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+strong {
+  font-weight: bold;
+}
+ol,
+ul {
+  margin-left: 2em;
+  margin-bottom: 20px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 10px;
+}
+li {
+  margin-bottom: 10px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: lighter;
+  text-transform: capitalize;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 24.624px;
+  line-height: 29.548799999999996px;
+}
+h2 {
+  font-size: 24.624px;
+  line-height: 29.548799999999996px;
+}
+h3 {
+  font-size: 23.44px;
+  line-height: 28.128px;
+}
+h4 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+h5 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+h6 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+img {
+  margin-bottom: 20px;
+}
+h1 img,
+h2 img,
+h3 img,
+h4 img,
+h5 img,
+h6 img,
+p img {
+  margin-bottom: 0;
+}
+pre {
+  margin-bottom: 20px;
+}
+pre,
+code {
+  font-family: monospace;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+}
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 1px solid;
+}
+h2 {
+  border-bottom: 1px solid;
+}
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: none;
+}
+html * {
+  color: #839496;
+}
+html body {
+  background-color: #002b36;
+}
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  color: #93a1a1;
+  border-color: #839496;
+}
+html a,
+html a:active,
+html a:visited {
+  color: #93a1a1;
+}
+html a:hover {
+  background-color: #073642;
+}
+html pre {
+  color: #93a1a1;
+  background-color: #073642;
+}
+html a,
+html a:active,
+html a:visited,
+html code.url {
+  color: #b58900;
+}
+html h1 {
+  color: #b58900;
+}
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  color: #b58900;
+}
+
+/*
+LICENSE
+
+Solarized Theme for Mou
+
+Copyright (c) 2012 CodeCatalyst, LLC
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Solarized
+
+Copyright (c) 2011 Ethan Schoonover
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+</style>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+        var div1 = document.createElement("div");
+        div1.style.cssText = "clear:both";
+        // create TOC list
+        var outline = document.createElement("div");
+        outline.setAttribute("id", "outline-list");
+        outline.style.cssText = "border:solid 1px #ccc; background:#eee; min-width:200px;padding:4px 10px;";
+        
+        var ele_p = document.createElement("p");
+        ele_p.style.cssText = "text-align: left; margin: 0;";
+        outline.appendChild(ele_p);
+        
+        var ele_span = document.createElement("span");
+        // ele_span.style.cssText = "float: left;";
+        var ele_text=document.createTextNode("TOC");
+        ele_span.appendChild(ele_text);
+        
+        var ele_a = document.createElement("a");
+        ele_a.appendChild(document.createTextNode("[+]"));
+        ele_a.setAttribute("href", "#");
+        ele_a.setAttribute("onclick", "javascript:return openct(this);");
+        ele_a.setAttribute("title", "Click to Open TOC");
+
+        ele_span.appendChild(ele_a);
+        ele_p.appendChild(ele_span);
+
+        var ele_ol = document.createElement("ol");
+        ele_ol.style.cssText = "display:none;margin-left:14px;padding-left:14px;line-height:160%;";
+        ele_ol.setAttribute("id", "outline_ol");
+        outline.appendChild(ele_ol);
+        var div1 = document.createElement("div");
+        div1.style.cssText = "clear:both";
+
+        document.body.insertBefore(outline, document.body.childNodes[0]);
+        // get all the headlines
+        var headers = document.querySelectorAll('h1,h2,h3,h4,h5,h6');
+        if (headers.length < 2)
+          return;
+
+        // -----
+        var old_h = 0, ol_cnt = 0;
+        // -----
+        
+        for (var i = 0; i < headers.length; i++) {
+          
+          var ele_ols = null;
+            // get H* and prepare for the ordered list 
+            var header = headers[i];
+            //header.setAttribute("id", "t" + i + header.tagName);
+            header.setAttribute("id", header.textContent);
+            var h = parseInt(header.tagName.substr(1), 10);
+            // -----
+            if (!old_h){
+              old_h = h;
+            }
+            
+            if (h > old_h) {
+              ele_ols = document.createElement("ol");
+              var ele_Current = ele_ol;
+              if(ele_Current && ol_cnt > 0){
+                var temp = ol_cnt;
+                while(temp > 0){
+                  ele_Current = ele_Current.lastChild;
+                  temp--;
+                }
+              }
+              ele_Current.lastChild.appendChild(ele_ols);
+              ol_cnt++;
+            } else if (h < old_h && ol_cnt > 0) {
+              if (h == 1) {
+                while (ol_cnt > 0) {
+                  ol_cnt--;
+                }
+              } else {
+                ele_ols = document.createElement("ol");
+                var ele_Current = ele_ol;
+                if(ele_Current && ol_cnt > 0){
+                  var temp = ol_cnt;
+                  while(temp > 1){
+                    ele_Current = ele_Current.lastChild;
+                    temp--;
+                  }
+                }
+              ele_Current.appendChild(ele_ols);
+
+              ol_cnt--;
+            }
+            }
+            if (h == 1) {
+              while (ol_cnt > 0) {
+                ol_cnt--;
+              }
+            }
+            old_h = h;
+            // -----
+            if (ele_ols){
+              ele_li = document.createElement("li")
+              ele_ols.appendChild(ele_li);
+            } else {
+              ele_li = document.createElement("li")
+              ele_ol.appendChild(ele_li);
+            }
+            
+            var a = document.createElement("a");
+            // set href for the TOC item 
+            //a.setAttribute("href", "#t" + i + header.tagName);
+            a.setAttribute("href", "#" + header.textContent);
+            // TOC item text
+            a.innerHTML = header.textContent;
+
+            
+            ele_li.appendChild(a);
+          }
+          // -----
+          while (ol_cnt > 0) {
+            ol_cnt--;
+          }
+          // -----
+
+        });
+        
+// 
+function openct(e) {
+  if (e.innerHTML == '[+]') {
+    // createTextNode
+    e.setAttribute('title', 'collapse');
+    e.innerHTML = '[-]';
+    var element = document.getElementById("outline_ol");
+    element.style.cssText = "margin-left:14px;padding-left:14px;line-height:160%;";
+  } else {
+    e.setAttribute('title', 'expand');
+    e.innerHTML = '[+]';
+    var element = document.getElementById("outline_ol");
+    element.style.cssText = "display:none;margin-left:14px;padding-left:14px;line-height:160%;";
+  }
+  e.blur();
+  return false;
+}
+</script>
+
+</head>
+<body>
+<h1>h1_1</h1>
+<h2>h2_1</h2>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<h1>h1_2</h1>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<h2>h2_2</h2>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<h1>h1_3</h1>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<h2>h2_3</h2>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<h1>h1_4</h1>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+<p>test</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

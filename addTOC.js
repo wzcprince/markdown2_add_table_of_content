@@ -13,7 +13,7 @@
         
         var ele_span = document.createElement("span");
         // ele_span.style.cssText = "float: left;";
-        var ele_text=document.createTextNode("目录");
+        var ele_text=document.createTextNode("TOC");
         ele_span.appendChild(ele_text);
         
         var ele_a = document.createElement("a");

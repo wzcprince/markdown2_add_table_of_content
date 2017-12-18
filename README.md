@@ -12,4 +12,4 @@ steps:
 
 # effect picture
 
- [./effect.png](./effect.png)
+ ![effect.png](effect.png)

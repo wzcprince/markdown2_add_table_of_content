@@ -18,3 +18,7 @@ steps:
 # effect picture
 
  ![effect.png](effect.png)
+
+# 2018-01-15-update
+
+**move the addTOC.js to https://github.com/wzcprince/efficiency/blob/master/MarkdownPad2-configs/export_html_add_toc.js **
